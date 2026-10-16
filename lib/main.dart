@@ -20,12 +20,26 @@ class App extends StatelessWidget {
       backgroundColor: const Color.fromARGB(255, 1, 98, 177),
       ),
       body: const Center(
-        child: OrderItemDisplay(5, 'Footlong'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const OrderItemDisplay(5, 'Footlong'),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                onPressed: () => print('Add button pressed!'),
+                child: const Text('Add'),
+              ),
+              ElevatedButton(
+                onPressed: () => print('Remove button pressed!'),
+                child: const Text('Remove'),
+              ),
+            ],
+          ),
+        ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: const Icon(Icons.add),
-      ),
+    ),
   );
 }
 }
