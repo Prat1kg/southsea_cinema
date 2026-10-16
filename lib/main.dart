@@ -2,32 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:southsea_cinema/constants.dart';
 import 'package:southsea_cinema/views/home_view.dart';
 import 'package:southsea_cinema/views/movie_listing.dart';
+import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const SouthseaCinemaApp());
+void main() {}}
+
+class MyApp extends StatelessWidget {
+
 }
 
-class SouthseaCinemaApp extends StatelessWidget {
-  const SouthseaCinemaApp({super.key});
+class MyHomePage extends StatelessWidget {
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: appTitle,
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: cinemaBackground,
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: cinemaBrand,
-          primary: cinemaBrand,
-          surface: cinemaSurface,
-        ),
-      ),
-      initialRoute: '/',
-      routes: {
-        '/': (context) => const HomeView(),
-        '/listing': (context) => const MovieListing(),
-      },
-    );
-  }
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+
 }
